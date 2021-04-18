@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main menu</title>
+
+    <style>
+        .container {
+            position: relative;
+            width: 485px;
+            height: 600px;
+        }
+
+        .container img {
+            width: 485px;
+            height: 600px;
+        }
+
+        .container .btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            background-color: #f1f1f1;
+            color: black;
+            font-size: 22px;
+            padding: 8px 30px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .container .btn:hover {
+            background-color: rebeccapurple;
+            color: white;
+        }
+
+
+        .container .btn1 {
+            position: absolute;
+            top: 65%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            background-color: #f1f1f1;
+            color: black;
+            font-size: 22px;
+            padding: 8px 30px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .container .btn1:hover {
+            background-color: rebeccapurple;
+            color: white;
+        }
+
+        .container .krizik {
+            position: absolute;
+            top: 50px;
+            left: 60px;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            background-color: #f1f1f1;
+            color: black;
+            font-size: 16px;
+            padding: 8px 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .container .krizik:hover {
+            background-color: rebeccapurple;
+            color: white;
+        }
+
+        #fotka {
+            width: 100%;
+        }
+
+    </style>
+
+
+
+
+
+</head>
+<body>
+
+<section>
+    <div class="container">
+        <img id="fotka" src="img/cityback-menu.jpg" alt="City">
+        <button id="hratHru" onclick="window.location.href = 'index.html';" class="btn">HRAŤ HRU</button>
+
+        <button id="tlacitko" onclick="myFunction()" class="btn1">INŠTRUKCIE</button>
+
+
+        <button style="display: none" id="menuBtn" onclick="myFunction()" class="krizik">MENU</button>
+
+        <img style="display: none" id="pozadie" src="img/cityback-instrukcie.jpg" alt="City">
+    </div>
+
+
+</section>
+
+
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("fotka");
+        var i = document.getElementById("pozadie");
+        var t = document.getElementById("tlacitko");
+        var h = document.getElementById("hratHru");
+        var m = document.getElementById("menuBtn");
+
+        if (x.style.display === "none") {
+            x.style.display = "block";
+            i.style.display = "none";
+            t.style.display = "block";
+            h.style.display = "block";
+            m.style.display = "none";
+
+        } else {
+            x.style.display = "none";
+            i.style.display = "block";
+            t.style.display = "none";
+            h.style.display = "none";
+            m.style.display = "block";
+        }
+    }
+</script>
+
+</body>
+</html>
